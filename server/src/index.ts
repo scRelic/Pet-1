@@ -11,6 +11,7 @@ import achievementRoutes from "./routes/achievements.route.js";
 import topicsRoutes from "./routes/topics.route.js";
 import userNotificationRoutes from "./routes/userNotification.route.js";
 import cookieParser from "cookie-parser";
+import pool from "./db.js";
 
 dotenv.config();
 const app = express();
@@ -26,6 +27,15 @@ app.use(
 
 app.get("/", (req, res) => {
   res.json({ message: "Backend is working 🚀" });
+});
+
+app.get("/test-db", async (req, res) => {
+  try {
+    const result = await pool.query("SELECT NOW()"); // Простой запрос текущего времени
+    res.json({ success: true, time: result.rows[0].now });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
 });
 
 app.use("/api/auth", authRoutes);
