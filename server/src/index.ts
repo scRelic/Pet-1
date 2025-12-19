@@ -24,6 +24,10 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.json({ message: "Backend is working 🚀" });
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/tests", testRoutes);
