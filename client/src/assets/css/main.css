@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+body {
+  background: linear-gradient(135deg, #2d2a3b 0%, #16131f 100%);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.bg-card {
+  background: linear-gradient(to right, #1D1B27, #100E16);
+}
+
+.bttn-primary {
+  background: linear-gradient(to right, #974fdb, #6921dd);
+}
+
+.bttn-primary:hover {
+  background: linear-gradient(to right, #8947c7, #6320cf);
+  transform: scale(1.01);
+  box-shadow: 0 1px 8px 1px #974fdb66, 0 1px 4px 1px #6921dd33;
+}
+
+.bg-bttn-secondary {
+  background: linear-gradient(to right, #5d58db, #204ed9);
+}
+
+.bg-bttn-secondary:hover {
+  background: linear-gradient(to right, #5753ce, #1540c0);
+}
+
+.text-purple {
+  color: #974fdb;
+}
+
+.border-purple {
+  border-color: #974fdb;
+}
+
+.text-secondary {
+  color: #9ca3af;
+}
+
+.ps__rail-y {
+  background: transparent !important;
+  width: 8px !important;
+  right: 2px !important;
+}
+
+.ps__thumb-y {
+  background: #22d3ee !important; 
+  border-radius: 8px !important;
+}
+
+.Toastify__toast--success {
+  background: #974fdb !important; 
+  color: #ffffff !important;
+}
+
+.Toastify__toast--error {
+  background: #bd0000 !important; 
+  color: #ffffff !important;
+}
